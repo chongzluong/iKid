@@ -22,7 +22,11 @@
                                 <rect key="frame" x="0.0" y="507" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xMX-ga-gwH"/>
-                                    <barButtonItem title="Flip Q/A" id="R5o-ac-HEG"/>
+                                    <barButtonItem title="Flip Q/A" id="R5o-ac-HEG">
+                                        <connections>
+                                            <action selector="Flip:" destination="nmN-MI-WTJ" id="4aS-F1-Raa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -236,6 +240,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaO-xi-zxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1630" y="1075"/>
+        </scene>
+        <!--Dad Joke View Controller-->
+        <scene sceneID="QH0-6s-m9z">
+            <objects>
+                <viewController storyboardIdentifier="FirstDad" id="UFp-oq-99g" customClass="DadJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CCd-co-hYF"/>
+                        <viewControllerLayoutGuide type="bottom" id="qJv-Zs-VOU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="noq-cp-byn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many apples grow on a tree?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2E-MP-Whe">
+                                <rect key="frame" x="171" y="289.5" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S2E-MP-Whe" firstAttribute="centerX" secondItem="noq-cp-byn" secondAttribute="centerX" id="kdJ-f8-Pxh"/>
+                            <constraint firstItem="S2E-MP-Whe" firstAttribute="centerY" secondItem="noq-cp-byn" secondAttribute="centerY" id="vk0-RA-S5P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2k-Zw-1bE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="1535"/>
+        </scene>
+        <!--Dad Punch Line View Controller-->
+        <scene sceneID="Toc-E1-TWh">
+            <objects>
+                <viewController storyboardIdentifier="SecondDad" id="dfw-qz-gti" customClass="DadPunchLineViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P2M-o9-C1U"/>
+                        <viewControllerLayoutGuide type="bottom" id="UbM-fz-pLu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ERN-Tp-tqY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All of them." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-3E-sIu">
+                                <rect key="frame" x="256.5" y="289.5" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ep1-3E-sIu" firstAttribute="centerX" secondItem="ERN-Tp-tqY" secondAttribute="centerX" id="1z9-33-lkx"/>
+                            <constraint firstItem="ep1-3E-sIu" firstAttribute="centerY" secondItem="ERN-Tp-tqY" secondAttribute="centerY" id="LSi-UP-60T"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bj-ky-ND2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494" y="1987"/>
         </scene>
         <!--ViewController-->
         <scene sceneID="Tgs-Uq-0Ze">
