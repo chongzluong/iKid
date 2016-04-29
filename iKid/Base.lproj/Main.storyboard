@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Dad-->
         <scene sceneID="kPB-V6-bZc">
             <objects>
-                <viewController id="nmN-MI-WTJ" sceneMemberID="viewController">
+                <viewController id="nmN-MI-WTJ" customClass="DadViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NLu-Xf-p17"/>
                         <viewControllerLayoutGuide type="bottom" id="DYr-Y5-rG7"/>
@@ -16,7 +17,21 @@
                     <view key="view" contentMode="scaleToFill" id="qPt-kF-ghT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jb6-dX-E95">
+                                <rect key="frame" x="0.0" y="507" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xMX-ga-gwH"/>
+                                    <barButtonItem title="Flip Q/A" id="R5o-ac-HEG"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DYr-Y5-rG7" firstAttribute="top" secondItem="Jb6-dX-E95" secondAttribute="bottom" id="29a-o2-Hfd"/>
+                            <constraint firstItem="Jb6-dX-E95" firstAttribute="leading" secondItem="qPt-kF-ghT" secondAttribute="leading" id="8ks-hq-3fM"/>
+                            <constraint firstAttribute="trailing" secondItem="Jb6-dX-E95" secondAttribute="trailing" id="rvv-UE-NJa"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dad" id="JRU-4j-kci"/>
                 </viewController>
@@ -27,7 +42,7 @@
         <!--Pun-->
         <scene sceneID="Gb9-AZ-MSU">
             <objects>
-                <viewController id="ORT-DJ-PEs" sceneMemberID="viewController">
+                <viewController id="ORT-DJ-PEs" customClass="PunViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="niu-5d-sf2"/>
                         <viewControllerLayoutGuide type="bottom" id="Vd1-gM-ri6"/>
@@ -35,7 +50,25 @@
                     <view key="view" contentMode="scaleToFill" id="2kJ-mx-OKC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQp-go-5PS">
+                                <rect key="frame" x="0.0" y="507" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="msl-H6-NoE"/>
+                                    <barButtonItem title="Flip Q/A" id="kW8-zH-eCX">
+                                        <connections>
+                                            <action selector="Flip:" destination="ORT-DJ-PEs" id="coH-CF-buV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vd1-gM-ri6" firstAttribute="top" secondItem="rQp-go-5PS" secondAttribute="bottom" id="Bbk-WY-1WK"/>
+                            <constraint firstAttribute="trailing" secondItem="rQp-go-5PS" secondAttribute="trailing" id="M6Z-rt-TUM"/>
+                            <constraint firstItem="rQp-go-5PS" firstAttribute="leading" secondItem="2kJ-mx-OKC" secondAttribute="leading" id="VWU-PU-202"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pun" id="NTY-Ec-aeO"/>
                 </viewController>
@@ -55,20 +88,154 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TESTING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkr-Ab-E2d">
-                                <rect key="frame" x="212" y="234" width="318" height="80"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7TY-sz-hhw">
+                                <rect key="frame" x="0.0" y="507" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4uF-4J-hSz"/>
+                                    <barButtonItem title="Flip Q/A" id="Lyd-yw-J2n">
+                                        <connections>
+                                            <action selector="Flip:" destination="Uk1-iK-4xH" id="QJ0-13-Es0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7TY-sz-hhw" secondAttribute="trailing" id="NYV-m5-D3n"/>
+                            <constraint firstItem="7TY-sz-hhw" firstAttribute="leading" secondItem="G4r-HL-7Ub" secondAttribute="leading" id="ZPs-gt-8kz"/>
+                            <constraint firstItem="8GD-zD-tgD" firstAttribute="top" secondItem="7TY-sz-hhw" secondAttribute="bottom" id="yTL-3I-a9b"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Good" id="SHe-6v-WSL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyi-yi-qKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1012" y="23"/>
+        </scene>
+        <!--Good Joke View Controller-->
+        <scene sceneID="Ob5-Tt-VvD">
+            <objects>
+                <viewController storyboardIdentifier="First" id="O5x-NX-0ru" customClass="GoodJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kMy-wa-N7s"/>
+                        <viewControllerLayoutGuide type="bottom" id="52N-Hi-xah"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="46c-Vd-gyU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What did the pirate say when he turned 80?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQP-Kd-Sak">
+                                <rect key="frame" x="133" y="290" width="334.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QQP-Kd-Sak" firstAttribute="centerX" secondItem="46c-Vd-gyU" secondAttribute="centerX" id="EPP-oQ-9cK"/>
+                            <constraint firstItem="QQP-Kd-Sak" firstAttribute="centerY" secondItem="46c-Vd-gyU" secondAttribute="centerY" id="GeI-L1-XaL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fy0-dG-paY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="-340"/>
+        </scene>
+        <!--Good Punch Line View Controller-->
+        <scene sceneID="rb4-ZD-z9H">
+            <objects>
+                <viewController storyboardIdentifier="Second" id="hfh-dX-uqD" customClass="GoodPunchLineViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s8e-Cf-67G"/>
+                        <viewControllerLayoutGuide type="bottom" id="Caz-qI-nhm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p3o-nJ-j1E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aye Matey :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOH-v0-C93">
+                                <rect key="frame" x="253" y="289.5" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uOH-v0-C93" firstAttribute="centerX" secondItem="p3o-nJ-j1E" secondAttribute="centerX" id="5hG-Dt-DqW"/>
+                            <constraint firstItem="uOH-v0-C93" firstAttribute="centerY" secondItem="p3o-nJ-j1E" secondAttribute="centerY" id="KyO-KY-A4Z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fu9-P4-M6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="53"/>
+        </scene>
+        <!--Pun Joke View Controller-->
+        <scene sceneID="fef-cz-dkz">
+            <objects>
+                <viewController storyboardIdentifier="FirstPun" id="Heq-9c-SGO" customClass="PunJokeViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xGC-9G-tja"/>
+                        <viewControllerLayoutGuide type="bottom" id="iOX-7s-CoM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="An7-Om-WUB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pun1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZYZ-DU-oDb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZYZ-DU-oDb" secondAttribute="height" multiplier="519:326" id="zjX-Mg-agw"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zjX-Mg-agw"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZYZ-DU-oDb" firstAttribute="width" secondItem="An7-Om-WUB" secondAttribute="width" id="NYk-gg-cPh"/>
+                            <constraint firstItem="ZYZ-DU-oDb" firstAttribute="centerY" secondItem="An7-Om-WUB" secondAttribute="centerY" id="OlU-yy-thm"/>
+                            <constraint firstItem="ZYZ-DU-oDb" firstAttribute="height" secondItem="An7-Om-WUB" secondAttribute="height" id="Rd4-SU-6TB"/>
+                            <constraint firstAttribute="centerX" secondItem="ZYZ-DU-oDb" secondAttribute="centerX" id="Ycc-ss-3vL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G1E-5A-KtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="605"/>
+        </scene>
+        <!--Pun Punch Line View Controller-->
+        <scene sceneID="99a-bj-aWF">
+            <objects>
+                <viewController storyboardIdentifier="SecondPun" id="EQJ-Nf-07z" customClass="PunPunchLineViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PwC-Hh-ygb"/>
+                        <viewControllerLayoutGuide type="bottom" id="oJj-L8-qwt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uWg-mB-zhf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pun2.png" translatesAutoresizingMaskIntoConstraints="NO" id="pFl-MF-02w">
+                                <rect key="frame" x="168.5" y="136" width="263" height="328"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pFl-MF-02w" firstAttribute="centerX" secondItem="uWg-mB-zhf" secondAttribute="centerX" id="cz2-m7-gVu"/>
+                            <constraint firstItem="pFl-MF-02w" firstAttribute="centerY" secondItem="uWg-mB-zhf" secondAttribute="centerY" id="lk1-rX-BzT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaO-xi-zxl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="1075"/>
         </scene>
         <!--ViewController-->
         <scene sceneID="Tgs-Uq-0Ze">
@@ -90,4 +257,8 @@
             <point key="canvasLocation" x="190" y="353"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pun1.png" width="519" height="326"/>
+        <image name="pun2.png" width="263" height="328"/>
+    </resources>
 </document>

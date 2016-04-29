@@ -1,5 +1,5 @@
 //
-//  GoodViewController.swift
+//  PunViewController.swift
 //  iKid
 //
 //  Created by Timothy Luong on 4/28/16.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-class GoodViewController: UIViewController {
+class PunViewController: UIViewController {
     
-    private var jokeViewController : GoodJokeViewController!
-    private var plViewController : GoodPunchLineViewController!
+    private var jokeViewController : PunJokeViewController!
+    private var plViewController : PunPunchLineViewController!
     
     private func firstBuilder() {
         if jokeViewController == nil {
-            jokeViewController = storyboard?.instantiateViewControllerWithIdentifier("First")
-                as! GoodJokeViewController
+            jokeViewController = storyboard?.instantiateViewControllerWithIdentifier("FirstPun")
+                as! PunJokeViewController
         }
     }
     
     private func secondBuilder() {
         if plViewController == nil {
-            plViewController = storyboard?.instantiateViewControllerWithIdentifier("Second")
-                as! GoodPunchLineViewController
+            plViewController = storyboard?.instantiateViewControllerWithIdentifier("SecondPun")
+                as! PunPunchLineViewController
         }
     }
     
@@ -62,6 +62,7 @@ class GoodViewController: UIViewController {
             to!.didMoveToParentViewController(self)
         }
     }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
